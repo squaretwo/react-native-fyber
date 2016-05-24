@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B574985A1CEFB0AB002F1EFF /* RNFyber.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B57498591CEFB0AB002F1EFF /* RNFyber.h */; };
+		B574985C1CEFB0AB002F1EFF /* RNFyber.m in Sources */ = {isa = PBXBuildFile; fileRef = B574985B1CEFB0AB002F1EFF /* RNFyber.m */; };
+		B5BEC73A1CF3953700153483 /* RNFyberOfferWall.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BEC7381CF3953700153483 /* RNFyberOfferWall.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B57498541CEFB0AB002F1EFF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				B574985A1CEFB0AB002F1EFF /* RNFyber.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B57498561CEFB0AB002F1EFF /* libRNFyber.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNFyber.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57498591CEFB0AB002F1EFF /* RNFyber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNFyber.h; sourceTree = "<group>"; };
+		B574985B1CEFB0AB002F1EFF /* RNFyber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNFyber.m; sourceTree = "<group>"; };
+		B5BEC7381CF3953700153483 /* RNFyberOfferWall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFyberOfferWall.m; sourceTree = "<group>"; };
+		B5BEC7391CF3953700153483 /* RNFyberOfferWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFyberOfferWall.h; sourceTree = "<group>"; };
+		B5BEC8381CF3D32500153483 /* FYB_SDK_versions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYB_SDK_versions.h; sourceTree = "<group>"; };
+		B5BEC8391CF3D32500153483 /* FYBAdapterOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBAdapterOptions.h; sourceTree = "<group>"; };
+		B5BEC83A1CF3D32500153483 /* FYBBannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBBannerController.h; sourceTree = "<group>"; };
+		B5BEC83B1CF3D32500153483 /* FYBBannerControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBBannerControllerDelegate.h; sourceTree = "<group>"; };
+		B5BEC83C1CF3D32500153483 /* FYBBannerControllerState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBBannerControllerState.h; sourceTree = "<group>"; };
+		B5BEC83D1CF3D32500153483 /* FYBBannerNetworkAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBBannerNetworkAdapter.h; sourceTree = "<group>"; };
+		B5BEC83E1CF3D32500153483 /* FYBBannerNetworkAdapterDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBBannerNetworkAdapterDelegate.h; sourceTree = "<group>"; };
+		B5BEC83F1CF3D32500153483 /* FYBBannerPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBBannerPosition.h; sourceTree = "<group>"; };
+		B5BEC8401CF3D32500153483 /* FYBBannerSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBBannerSize.h; sourceTree = "<group>"; };
+		B5BEC8411CF3D32500153483 /* FYBBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBBannerView.h; sourceTree = "<group>"; };
+		B5BEC8421CF3D32500153483 /* FYBBaseNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBBaseNetwork.h; sourceTree = "<group>"; };
+		B5BEC8431CF3D32500153483 /* FYBCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBCacheManager.h; sourceTree = "<group>"; };
+		B5BEC8441CF3D32500153483 /* FYBError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBError.h; sourceTree = "<group>"; };
+		B5BEC8451CF3D32500153483 /* FyberSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FyberSDK.h; sourceTree = "<group>"; };
+		B5BEC8461CF3D32500153483 /* FYBInterstitialController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialController.h; sourceTree = "<group>"; };
+		B5BEC8471CF3D32500153483 /* FYBInterstitialControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialControllerDelegate.h; sourceTree = "<group>"; };
+		B5BEC8481CF3D32500153483 /* FYBInterstitialControllerDismissReason.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialControllerDismissReason.h; sourceTree = "<group>"; };
+		B5BEC8491CF3D32500153483 /* FYBInterstitialControllerState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialControllerState.h; sourceTree = "<group>"; };
+		B5BEC84A1CF3D32500153483 /* FYBInterstitialNetworkAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialNetworkAdapter.h; sourceTree = "<group>"; };
+		B5BEC84B1CF3D32500153483 /* FYBInterstitialNetworkAdapterDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialNetworkAdapterDelegate.h; sourceTree = "<group>"; };
+		B5BEC84C1CF3D32500153483 /* FYBLogAppender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBLogAppender.h; sourceTree = "<group>"; };
+		B5BEC84D1CF3D32500153483 /* FYBLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBLogger.h; sourceTree = "<group>"; };
+		B5BEC84E1CF3D32500153483 /* FYBLogLevel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBLogLevel.h; sourceTree = "<group>"; };
+		B5BEC84F1CF3D32500153483 /* FYBOfferWallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBOfferWallViewController.h; sourceTree = "<group>"; };
+		B5BEC8501CF3D32500153483 /* FYBPrecachingNetworkAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBPrecachingNetworkAdapter.h; sourceTree = "<group>"; };
+		B5BEC8511CF3D32500153483 /* FYBRandomID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBRandomID.h; sourceTree = "<group>"; };
+		B5BEC8521CF3D32500153483 /* FYBReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBReachability.h; sourceTree = "<group>"; };
+		B5BEC8531CF3D32500153483 /* FYBRequestParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBRequestParameters.h; sourceTree = "<group>"; };
+		B5BEC8541CF3D32500153483 /* FYBRewardedVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoController.h; sourceTree = "<group>"; };
+		B5BEC8551CF3D32500153483 /* FYBRewardedVideoControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoControllerDelegate.h; sourceTree = "<group>"; };
+		B5BEC8561CF3D32500153483 /* FYBRewardedVideoControllerDismissReason.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoControllerDismissReason.h; sourceTree = "<group>"; };
+		B5BEC8571CF3D32500153483 /* FYBRewardedVideoControllerState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoControllerState.h; sourceTree = "<group>"; };
+		B5BEC8581CF3D32500153483 /* FYBRewardedVideoNetworkAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoNetworkAdapter.h; sourceTree = "<group>"; };
+		B5BEC8591CF3D32500153483 /* FYBRewardedVideoNetworkAdapterDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoNetworkAdapterDelegate.h; sourceTree = "<group>"; };
+		B5BEC85A1CF3D32500153483 /* FYBRewardedVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoViewController.h; sourceTree = "<group>"; };
+		B5BEC85B1CF3D32500153483 /* FYBSDKOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBSDKOptions.h; sourceTree = "<group>"; };
+		B5BEC85C1CF3D32500153483 /* FYBSystemLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBSystemLogger.h; sourceTree = "<group>"; };
+		B5BEC85D1CF3D32500153483 /* FYBTPNGenericAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBTPNGenericAdapter.h; sourceTree = "<group>"; };
+		B5BEC85E1CF3D32500153483 /* FYBTPNMediationTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBTPNMediationTypes.h; sourceTree = "<group>"; };
+		B5BEC85F1CF3D32500153483 /* FYBTPNVideoAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBTPNVideoAdapter.h; sourceTree = "<group>"; };
+		B5BEC8601CF3D32500153483 /* FYBUrlParametersProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBUrlParametersProvider.h; sourceTree = "<group>"; };
+		B5BEC8611CF3D32500153483 /* FYBUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBUser.h; sourceTree = "<group>"; };
+		B5BEC8621CF3D32500153483 /* FYBUserConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBUserConstants.h; sourceTree = "<group>"; };
+		B5BEC8631CF3D32500153483 /* FYBVirtualCurrencyClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBVirtualCurrencyClient.h; sourceTree = "<group>"; };
+		B5BEC8641CF3D32500153483 /* FYBVirtualCurrencyClientDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBVirtualCurrencyClientDelegate.h; sourceTree = "<group>"; };
+		B5BEC8651CF3D32500153483 /* FYBVirtualCurrencyErrorType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBVirtualCurrencyErrorType.h; sourceTree = "<group>"; };
+		B5BEC8661CF3D32500153483 /* FYBVirtualCurrencyResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBVirtualCurrencyResponse.h; sourceTree = "<group>"; };
+		B5BEC8671CF3D32500153483 /* libFyberSDK-8.3.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libFyberSDK-8.3.1.a"; sourceTree = "<group>"; };
+		B5BEC8691CF3D32500153483 /* FYBBackIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FYBBackIcon@2x.png"; sourceTree = "<group>"; };
+		B5BEC86A1CF3D32500153483 /* FYBBackIconiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FYBBackIconiPad@2x.png"; sourceTree = "<group>"; };
+		B5BEC86B1CF3D32500153483 /* FYBBackIconiPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FYBBackIconiPhone@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		B574984D1CEFB0AB002F1EFF = {
+			isa = PBXGroup;
+			children = (
+				B5BEC8371CF3D32500153483 /* fyber-sdk-lib */,
+				B57498581CEFB0AB002F1EFF /* RNFyber */,
+				B57498571CEFB0AB002F1EFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B57498571CEFB0AB002F1EFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B57498561CEFB0AB002F1EFF /* libRNFyber.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B57498581CEFB0AB002F1EFF /* RNFyber */ = {
+			isa = PBXGroup;
+			children = (
+				B5BEC7381CF3953700153483 /* RNFyberOfferWall.m */,
+				B5BEC7391CF3953700153483 /* RNFyberOfferWall.h */,
+				B57498591CEFB0AB002F1EFF /* RNFyber.h */,
+				B574985B1CEFB0AB002F1EFF /* RNFyber.m */,
+			);
+			path = RNFyber;
+			sourceTree = "<group>";
+		};
+		B5BEC8371CF3D32500153483 /* fyber-sdk-lib */ = {
+			isa = PBXGroup;
+			children = (
+				B5BEC8381CF3D32500153483 /* FYB_SDK_versions.h */,
+				B5BEC8391CF3D32500153483 /* FYBAdapterOptions.h */,
+				B5BEC83A1CF3D32500153483 /* FYBBannerController.h */,
+				B5BEC83B1CF3D32500153483 /* FYBBannerControllerDelegate.h */,
+				B5BEC83C1CF3D32500153483 /* FYBBannerControllerState.h */,
+				B5BEC83D1CF3D32500153483 /* FYBBannerNetworkAdapter.h */,
+				B5BEC83E1CF3D32500153483 /* FYBBannerNetworkAdapterDelegate.h */,
+				B5BEC83F1CF3D32500153483 /* FYBBannerPosition.h */,
+				B5BEC8401CF3D32500153483 /* FYBBannerSize.h */,
+				B5BEC8411CF3D32500153483 /* FYBBannerView.h */,
+				B5BEC8421CF3D32500153483 /* FYBBaseNetwork.h */,
+				B5BEC8431CF3D32500153483 /* FYBCacheManager.h */,
+				B5BEC8441CF3D32500153483 /* FYBError.h */,
+				B5BEC8451CF3D32500153483 /* FyberSDK.h */,
+				B5BEC8461CF3D32500153483 /* FYBInterstitialController.h */,
+				B5BEC8471CF3D32500153483 /* FYBInterstitialControllerDelegate.h */,
+				B5BEC8481CF3D32500153483 /* FYBInterstitialControllerDismissReason.h */,
+				B5BEC8491CF3D32500153483 /* FYBInterstitialControllerState.h */,
+				B5BEC84A1CF3D32500153483 /* FYBInterstitialNetworkAdapter.h */,
+				B5BEC84B1CF3D32500153483 /* FYBInterstitialNetworkAdapterDelegate.h */,
+				B5BEC84C1CF3D32500153483 /* FYBLogAppender.h */,
+				B5BEC84D1CF3D32500153483 /* FYBLogger.h */,
+				B5BEC84E1CF3D32500153483 /* FYBLogLevel.h */,
+				B5BEC84F1CF3D32500153483 /* FYBOfferWallViewController.h */,
+				B5BEC8501CF3D32500153483 /* FYBPrecachingNetworkAdapter.h */,
+				B5BEC8511CF3D32500153483 /* FYBRandomID.h */,
+				B5BEC8521CF3D32500153483 /* FYBReachability.h */,
+				B5BEC8531CF3D32500153483 /* FYBRequestParameters.h */,
+				B5BEC8541CF3D32500153483 /* FYBRewardedVideoController.h */,
+				B5BEC8551CF3D32500153483 /* FYBRewardedVideoControllerDelegate.h */,
+				B5BEC8561CF3D32500153483 /* FYBRewardedVideoControllerDismissReason.h */,
+				B5BEC8571CF3D32500153483 /* FYBRewardedVideoControllerState.h */,
+				B5BEC8581CF3D32500153483 /* FYBRewardedVideoNetworkAdapter.h */,
+				B5BEC8591CF3D32500153483 /* FYBRewardedVideoNetworkAdapterDelegate.h */,
+				B5BEC85A1CF3D32500153483 /* FYBRewardedVideoViewController.h */,
+				B5BEC85B1CF3D32500153483 /* FYBSDKOptions.h */,
+				B5BEC85C1CF3D32500153483 /* FYBSystemLogger.h */,
+				B5BEC85D1CF3D32500153483 /* FYBTPNGenericAdapter.h */,
+				B5BEC85E1CF3D32500153483 /* FYBTPNMediationTypes.h */,
+				B5BEC85F1CF3D32500153483 /* FYBTPNVideoAdapter.h */,
+				B5BEC8601CF3D32500153483 /* FYBUrlParametersProvider.h */,
+				B5BEC8611CF3D32500153483 /* FYBUser.h */,
+				B5BEC8621CF3D32500153483 /* FYBUserConstants.h */,
+				B5BEC8631CF3D32500153483 /* FYBVirtualCurrencyClient.h */,
+				B5BEC8641CF3D32500153483 /* FYBVirtualCurrencyClientDelegate.h */,
+				B5BEC8651CF3D32500153483 /* FYBVirtualCurrencyErrorType.h */,
+				B5BEC8661CF3D32500153483 /* FYBVirtualCurrencyResponse.h */,
+				B5BEC8671CF3D32500153483 /* libFyberSDK-8.3.1.a */,
+				B5BEC8681CF3D32500153483 /* Resources */,
+			);
+			path = "fyber-sdk-lib";
+			sourceTree = "<group>";
+		};
+		B5BEC8681CF3D32500153483 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5BEC8691CF3D32500153483 /* FYBBackIcon@2x.png */,
+				B5BEC86A1CF3D32500153483 /* FYBBackIconiPad@2x.png */,
+				B5BEC86B1CF3D32500153483 /* FYBBackIconiPhone@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B57498551CEFB0AB002F1EFF /* RNFyber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B574985F1CEFB0AB002F1EFF /* Build configuration list for PBXNativeTarget "RNFyber" */;
+			buildPhases = (
+				B57498521CEFB0AB002F1EFF /* Sources */,
+				B57498541CEFB0AB002F1EFF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNFyber;
+			productName = RNFyber;
+			productReference = B57498561CEFB0AB002F1EFF /* libRNFyber.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B574984E1CEFB0AB002F1EFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Boon Media Inc.";
+				TargetAttributes = {
+					B57498551CEFB0AB002F1EFF = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = B57498511CEFB0AB002F1EFF /* Build configuration list for PBXProject "RNFyber" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B574984D1CEFB0AB002F1EFF;
+			productRefGroup = B57498571CEFB0AB002F1EFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B57498551CEFB0AB002F1EFF /* RNFyber */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B57498521CEFB0AB002F1EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B574985C1CEFB0AB002F1EFF /* RNFyber.m in Sources */,
+				B5BEC73A1CF3953700153483 /* RNFyberOfferWall.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B574985D1CEFB0AB002F1EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B574985E1CEFB0AB002F1EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B57498601CEFB0AB002F1EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../ios/**";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/fyber-sdk-lib/**",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B57498611CEFB0AB002F1EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../ios/**";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/fyber-sdk-lib/**",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B57498511CEFB0AB002F1EFF /* Build configuration list for PBXProject "RNFyber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B574985D1CEFB0AB002F1EFF /* Debug */,
+				B574985E1CEFB0AB002F1EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B574985F1CEFB0AB002F1EFF /* Build configuration list for PBXNativeTarget "RNFyber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57498601CEFB0AB002F1EFF /* Debug */,
+				B57498611CEFB0AB002F1EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B574984E1CEFB0AB002F1EFF /* Project object */;
+}
