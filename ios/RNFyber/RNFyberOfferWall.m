@@ -17,16 +17,22 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(showOfferWall:(NSString *)userId)
+// Initialize Fyber before showing the offer wall
+RCT_EXPORT_METHOD(initializeOfferWall:(NSString *)appId securityToken:(NSString *)securityToken userId:(NSString *)userId)
 {
-  FYBSDKOptions *options = [FYBSDKOptions optionsWithAppId:@"44761"
+  FYBSDKOptions *options = [FYBSDKOptions optionsWithAppId:appId
                                                     userId:userId
-                                             securityToken:@"bf2b549aa134a0a18171ca1219d3d92d"];
+                                             securityToken:securityToken];
   [FyberSDK startWithOptions:options];
+}
+
+//
+// Show the Offer Wall
+//
+RCT_EXPORT_METHOD(showOfferWall)
+{
+
   FYBOfferWallViewController *offerWallViewController = [FyberSDK offerWallViewController];
-  //
-  // Show the Offer Wall
-  //
   [offerWallViewController presentFromViewController:[UIApplication sharedApplication].delegate.window.rootViewController animated:YES completion:^{
 
     NSLog(@"Offer Wall presented");
