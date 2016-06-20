@@ -1,6 +1,6 @@
 {
   "name": "react-native-fyber",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A react-native interface for using Fyber for advertising via Paywall, Banner, and Intersitials",
   "main": "index.js",
   "scripts": {
@@ -15,11 +15,7 @@
   ],
   "author": "Ben Yee <benyee@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "react": "0.14.8",
-    "react-native": "0.25.1"
-  },
   "peerDependencies": {
-    "react-native": "0.25.1"
+    "react-native": "^0.27.0"
   }
 }
