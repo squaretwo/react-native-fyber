@@ -16,6 +16,6 @@
   "author": "Ben Yee <benyee@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.27.0"
+    "react-native": ">=0.27.0"
   }
 }
