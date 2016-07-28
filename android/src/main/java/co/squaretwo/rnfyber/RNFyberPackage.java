@@ -1,6 +1,7 @@
 package co.squaretwo.rnfyber;
 
 import android.app.Activity;
+import android.content.Intent;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
@@ -13,25 +14,23 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by ben on 7/14/16.
- */
 public class RNFyberPackage implements ReactPackage {
-    private Activity mActivity = null;
+    public RNFyberPackage() {
+    }
 
-    public RNFyberPackage(Activity activity) {
-        mActivity = activity;
+    public void onNewIntent(Intent intent) {
     }
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Arrays.<NativeModule>asList(new RNFyberOfferWallModule(reactContext, mActivity));
+        return Arrays.<NativeModule>asList(new RNFyberOfferWallModule(reactContext));
     }
 
     @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
+
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         List<ViewManager> modules = new ArrayList<>();

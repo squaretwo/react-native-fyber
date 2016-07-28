@@ -22,15 +22,15 @@ public class RNFyberOfferWallModule extends ReactContextBaseJavaModule {
     private static final String TAG = "RNFyberOfferWall";
     private static final int OFFER_WALL_REQUEST = 1;
 
-    RequestCallback requestCallback;
-    ReactApplicationContext mContext;
-    Activity mActivity;
-    Intent mOfferWallIntent;
+    private RequestCallback requestCallback;
+    private ReactApplicationContext mContext;
+    private Activity mActivity;
+    private Intent mOfferWallIntent;
 
-    public RNFyberOfferWallModule(ReactApplicationContext reactContext, Activity activity) {
+    public RNFyberOfferWallModule(ReactApplicationContext reactContext) {
         super(reactContext);
         mContext = reactContext;
-        mActivity = activity;
+        mActivity = getCurrentActivity();
     }
 
     @Override
