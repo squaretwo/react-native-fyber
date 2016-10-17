@@ -24,13 +24,11 @@ public class RNFyberOfferWallModule extends ReactContextBaseJavaModule {
 
     private RequestCallback requestCallback;
     private ReactApplicationContext mContext;
-    private Activity mActivity;
     private Intent mOfferWallIntent;
 
     public RNFyberOfferWallModule(ReactApplicationContext reactContext) {
         super(reactContext);
         mContext = reactContext;
-        mActivity = getCurrentActivity();
     }
 
     @Override
@@ -44,7 +42,7 @@ public class RNFyberOfferWallModule extends ReactContextBaseJavaModule {
             @Override
             public void run() {
                 Log.d(TAG, "Settings appId:" + appId);
-                Fyber.Settings settings = Fyber.with(appId, mActivity).withUserId(userId).withSecurityToken(securityToken).start();
+                Fyber.Settings settings = Fyber.with(appId, getCurrentActivity()).withUserId(userId).withSecurityToken(securityToken).start();
                 requestCallback = new RequestCallback() {
                     @Override
                     public void onRequestError(RequestError requestError) {
