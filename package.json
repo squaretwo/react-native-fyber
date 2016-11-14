@@ -1,7 +1,7 @@
 {
   "name": "react-native-fyber",
-  "version": "0.1.0",
-  "description": "A react-native interface for using Fyber for advertising via Paywall, Banner, and Intersitials",
+  "version": "0.2.0",
+  "description": "A react-native interface for using Fyber for advertising via Offerwall, Rewarded Video, Banner, and Intersitials",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,9 @@
   "keywords": [
     "fyber",
     "react-native",
-    "ads",
-    "paywall",
+    "banner ads",
+    "offerwall",
+    "rewarded video",
     "intersitials"
   ],
   "author": "Ben Yee <benyee@gmail.com>",

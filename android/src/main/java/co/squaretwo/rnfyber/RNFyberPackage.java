@@ -33,8 +33,7 @@ public class RNFyberPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        List<ViewManager> modules = new ArrayList<>();
-        return modules;
+      return Collections.emptyList();
     }
 
 }

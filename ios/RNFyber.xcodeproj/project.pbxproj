@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B52AD3AB1DDA5401008AE987 /* RNFyberRewardedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = B52AD3AA1DDA5401008AE987 /* RNFyberRewardedVideo.m */; };
 		B574985A1CEFB0AB002F1EFF /* RNFyber.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B57498591CEFB0AB002F1EFF /* RNFyber.h */; };
 		B574985C1CEFB0AB002F1EFF /* RNFyber.m in Sources */ = {isa = PBXBuildFile; fileRef = B574985B1CEFB0AB002F1EFF /* RNFyber.m */; };
 		B5BEC73A1CF3953700153483 /* RNFyberOfferWall.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BEC7381CF3953700153483 /* RNFyberOfferWall.m */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B52AD3A91DDA5401008AE987 /* RNFyberRewardedVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFyberRewardedVideo.h; sourceTree = "<group>"; };
+		B52AD3AA1DDA5401008AE987 /* RNFyberRewardedVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFyberRewardedVideo.m; sourceTree = "<group>"; };
 		B57498561CEFB0AB002F1EFF /* libRNFyber.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNFyber.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57498591CEFB0AB002F1EFF /* RNFyber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNFyber.h; sourceTree = "<group>"; };
 		B574985B1CEFB0AB002F1EFF /* RNFyber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNFyber.m; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 		B57498581CEFB0AB002F1EFF /* RNFyber */ = {
 			isa = PBXGroup;
 			children = (
+				B52AD3A91DDA5401008AE987 /* RNFyberRewardedVideo.h */,
+				B52AD3AA1DDA5401008AE987 /* RNFyberRewardedVideo.m */,
 				B5BEC7381CF3953700153483 /* RNFyberOfferWall.m */,
 				B5BEC7391CF3953700153483 /* RNFyberOfferWall.h */,
 				B57498591CEFB0AB002F1EFF /* RNFyber.h */,
@@ -204,7 +209,7 @@
 		B574984E1CEFB0AB002F1EFF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Boon Media Inc.";
 				TargetAttributes = {
 					B57498551CEFB0AB002F1EFF = {
@@ -235,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B574985C1CEFB0AB002F1EFF /* RNFyber.m in Sources */,
+				B52AD3AB1DDA5401008AE987 /* RNFyberRewardedVideo.m in Sources */,
 				B5BEC73A1CF3953700153483 /* RNFyberOfferWall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +262,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -301,8 +309,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
