@@ -5,10 +5,14 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.support.annotation.Nullable;
 
+import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.modules.core.DeviceEventManagerModule;
 
 import com.fyber.Fyber;
 import com.fyber.ads.AdFormat;
@@ -65,10 +69,10 @@ public class RNFyberRewardedVideoModule extends ReactContextBaseJavaModule {
                     public void onAdNotAvailable(AdFormat adFormat) {
                         Log.d(TAG, "No ad available");
                         sendEvent("rewardedVideoFailedToLoad", null);
-                        callback.invoke("Video is not ready.")
+                        callback.invoke("Video is not ready.");
                     }
                 };
-                RewardedVideoRequester.create(requestCallback).request(context);
+                RewardedVideoRequester.create(requestCallback).request(mContext);
             }
         });
     }
@@ -84,7 +88,7 @@ public class RNFyberRewardedVideoModule extends ReactContextBaseJavaModule {
             @Override
             public void run() {
                 Log.d(TAG, "showRewardedVideo started!!");
-                mContext.startActivityForResult(mRewardedVideoIntent, REWARDED_VIDEO_REQUEST_CODE);
+                mContext.startActivityForResult(mRewardedVideoIntent, REWARDED_VIDEO_REQUEST_CODE, null);
             }
         });
     }

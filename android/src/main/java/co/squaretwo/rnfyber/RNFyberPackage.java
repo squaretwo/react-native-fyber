@@ -23,7 +23,10 @@ public class RNFyberPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Arrays.<NativeModule>asList(new RNFyberOfferWallModule(reactContext));
+        List<NativeModule> modules = new ArrayList<>();
+        modules.add(new RNFyberOfferWallModule(reactContext));
+        modules.add(new RNFyberRewardedVideoModule(reactContext));
+        return modules;
     }
 
     @Override
