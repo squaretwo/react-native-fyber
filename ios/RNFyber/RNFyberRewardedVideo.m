@@ -66,5 +66,26 @@ RCT_EXPORT_METHOD(showRewardedVideo)
 }
 
 
+-(void)rewardedVideoController:(FYBRewardedVideoController *)rewardedVideoController didDismissVideoWithReason:(FYBRewardedVideoControllerDismissReason)reason{
+    
+    NSString *reasonDescription;
+    switch (reason) {
+        case FYBRewardedVideoControllerDismissReasonError:
+            reasonDescription = @"because of an error during playing";
+            [self.bridge.eventDispatcher sendDeviceEventWithName:@"rewardedVideoClosedByError" body:nil];
+            break;
+        case FYBRewardedVideoControllerDismissReasonUserEngaged:
+            reasonDescription = @"because the user clicked on it";
+            [self.bridge.eventDispatcher sendDeviceEventWithName:@"rewardedVideoClosedByUser" body:nil];
+            break;
+        case FYBRewardedVideoControllerDismissReasonAborted:
+            reasonDescription = @"because the user explicitly closed it";
+            break;
+    }
+    
+    NSLog(@"The video ad was dismissed %@", reasonDescription);
+}
+
+
 
 @end

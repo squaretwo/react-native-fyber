@@ -10,7 +10,9 @@ const RNFyberRewardedVideo = NativeModules.RNFyberRewardedVideo;
 const eventHandlers = {
   rewardedVideoReceived: new Map(),
   rewardedVideoFailedToLoad: new Map(),
-  rewardedVideoDidStart: new Map()
+  rewardedVideoDidStart: new Map(),
+  rewardedVideoClosedByUser: new Map(),
+  rewardedVideoClosedByError: new Map()
 };
 
 const addEventListener = (type, handler) => {
@@ -22,6 +24,12 @@ const addEventListener = (type, handler) => {
       eventHandlers[type].set(handler, DeviceEventEmitter.addListener(type, (error) => { handler(error); }));
       break;
     case 'rewardedVideoDidStart':
+      eventHandlers[type].set(handler, DeviceEventEmitter.addListener(type, handler));
+      break;
+    case 'rewardedVideoClosedByUser':
+      eventHandlers[type].set(handler, DeviceEventEmitter.addListener(type, handler));
+      break;
+    case 'rewardedVideoClosedByError':
       eventHandlers[type].set(handler, DeviceEventEmitter.addListener(type, handler));
       break;
     default:
@@ -41,6 +49,8 @@ const removeAllListeners = () => {
   DeviceEventEmitter.removeAllListeners('rewardedVideoReceived');
   DeviceEventEmitter.removeAllListeners('rewardedVideoFailedToLoad');
   DeviceEventEmitter.removeAllListeners('rewardedVideoDidStart');
+  DeviceEventEmitter.removeAllListeners('rewardedVideoClosedByUser');
+  DeviceEventEmitter.removeAllListeners('rewardedVideoClosedByError');
 };
 
 module.exports = {
