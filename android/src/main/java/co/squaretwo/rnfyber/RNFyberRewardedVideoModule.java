@@ -88,6 +88,7 @@ public class RNFyberRewardedVideoModule extends ReactContextBaseJavaModule {
             @Override
             public void run() {
                 Log.d(TAG, "showRewardedVideo started!!");
+                sendEvent("rewardedVideoDidStart", null);
                 mContext.startActivityForResult(mRewardedVideoIntent, REWARDED_VIDEO_REQUEST_CODE, null);
             }
         });
