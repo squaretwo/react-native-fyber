@@ -1,6 +1,6 @@
 //
 //
-// Copyright (c) 2015 Fyber. All rights reserved.
+// Copyright (c) 2016 Fyber. All rights reserved.
 //
 //
 
@@ -56,5 +56,10 @@
                          animated:(BOOL)animated
                        completion:(void (^)(void))completion
                           dismiss:(void (^)(NSError *error))dismiss;
+
+/**
+ *  Please use [FyberSDK offerWallViewController] instead
+ */
+- (instancetype)init __attribute__((unavailable("not available, use [FyberSDK offerWallViewController] instead")));
 
 @end

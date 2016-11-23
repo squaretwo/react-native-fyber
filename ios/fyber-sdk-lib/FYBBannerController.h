@@ -82,4 +82,9 @@
  */
 - (void)destroyBanner;
 
+/**
+ *  Please use [FyberSDK bannerController] instead
+ */
+- (instancetype)init __attribute__((unavailable("not available, use [FyberSDK bannerController] instead")));
+
 @end
