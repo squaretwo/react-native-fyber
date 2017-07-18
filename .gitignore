@@ -54,3 +54,4 @@ fastlane/screenshots
 
 # node
 node_modules/**/*
+.idea
