@@ -10,8 +10,6 @@ Fyber iOS SDK v8.3.1 is already packaged up to save time and pain!
 
 ### Installation
 
-#### With [`rnpm`](https://github.com/rnpm/rnpm) (recommended)
-
 1. `npm i react-native-fyber -S`
 2. `react-native link`
 
