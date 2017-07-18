@@ -1,11 +1,8 @@
 {
   "name": "react-native-fyber",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A react-native interface for using Fyber for advertising via Offerwall, Rewarded Video, Banner, and Intersitials",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "fyber",
     "react-native",
@@ -18,5 +15,10 @@
   "license": "MIT",
   "peerDependencies": {
     "react-native": ">=0.31.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bsy/react-native-fyber.git"
   }
+
 }
