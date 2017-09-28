@@ -1,6 +1,6 @@
 //
 //
-// Copyright (c) 2016 Fyber. All rights reserved.
+// Copyright (c) 2017 Fyber. All rights reserved.
 //
 //
 
@@ -9,51 +9,46 @@
 static NSString *const FyberErrorDomain = @"FyberErrorDomain";
 
 typedef NS_ENUM(NSInteger, FYBErrorCode) {
-    FYBErrorCodeSDKNoUserId                    = 0001,
-    FYBErrorCodeSDKNoAppId                     = 0002,
+    // SDK start
+    FYBErrorCodeSDKNotStarted                   = 0001,
 
-    FYBErrorCodeNetworkNoConnection            = 1000,
+    // General ad request errors
+    FYBErrorCodeNoNetworkConnection             = 1000,
+    FYBErrorCodeNotReady                        = 1001,
+    FYBErrorCodeNoOffers                        = 1002,
+    FYBErrorCodeMediation                       = 1003,
 
-    FYBErrorCodeRewardedVideoOSVersion         = 2000,
-    FYBErrorCodeRewardedVideoNotReady          = 2001,
-    FYBErrorCodeRewardedVideoNoOffers          = 2002,
-    FYBErrorCodeRewardedVideoMediation         = 2003,
-    FYBErrorCodeRewardedVideoLoading           = 2010,
-    FYBErrorCodeRewardedVideoLoadingTimeout    = 2011,
-    FYBErrorCodeRewardedVideoPlaying           = 2020,
-    FYBErrorCodeRewardedVideoPlayTimeout       = 2021,
-    FYBErrorCodeRewardedVideoInvalidJSResponse = 2030,
+    // Offer request
+    FYBErrorCodeRequesting                      = 2010,
+    FYBErrorCodeRequestTimeout                  = 2011,
+    FYBErrorCodeRequestJSON                     = 2012,
+    FYBErrorCodeRequestServer                   = 2013,
 
-    FYBErrorCodeInterstitialOSVersion          = 3000,
-    FYBErrorCodeInterstitialNotReady           = 3001,
-    FYBErrorCodeInterstitialNoOffers           = 3002,
-    FYBErrorCodeInterstitialRequesting         = 3010,
-    FYBErrorCodeInterstitialRequestingTimeout  = 3011,
-    FYBErrorCodeInterstitialJSON               = 3012,
-    FYBErrorCodeInterstitialServer             = 3013,
-    FYBErrorCodeInterstitialInvalidOffer       = 3020,
-    FYBErrorCodeInterstitialShowing            = 3030,
-    FYBErrorCodeInterstitialPreload            = 3031,
-    FYBErrorCodeInterstitialVideoTimeout       = 3100,
+    // Offer validation
+    FYBErrorCodeInvalidOffer                    = 2020,
+    FYBErrorCodeInvalidSize                     = 2021,
 
-    FYBErrorCodeOfferWallNoUserId              = 4001,
-    FYBErrorCodeOfferWallNoAppId               = 4002,
-    FYBErrorCodeOfferWallLoading               = 4010,
+    // Offer show
+    FYBErrorCodeShowing                         = 2030,
+    FYBErrorCodeShowPreload                     = 2031,
+    FYBErrorCodeShowTimeout                     = 2032,
+    FYBErrorCodeShowVideoTimeout                = 2033,
+    FYBErrorCodeShowLoading                     = 2034,
+    FYBErrorCodeShowInvalidJSResponse           = 2040,
 
-    FYBErrorCodeMediationOther                 = 5000,
-    FYBErrorCodeMediationSDK                   = 5001,
-    FYBErrorCodeMediationInvalidConfiguration  = 5002,
-    FYBErrorCodeMediationNoFill                = 5003,
-    FYBErrorCodeMediationServer                = 5004,
-    FYBErrorCodeMediationNetwork               = 5005,
-    FYBErrorCodeMediationAdTimeOut             = 5006,
-    FYBErrorCodeMediationNoPlacementId         = 5007,
+    // Mediation
+    FYBErrorCodeMediationOther                  = 5000,
+    FYBErrorCodeMediationSDK                    = 5001,
+    FYBErrorCodeMediationInvalidConfiguration   = 5002,
+    FYBErrorCodeMediationNoFill                 = 5003,
+    FYBErrorCodeMediationServer                 = 5004,
+    FYBErrorCodeMediationNetwork                = 5005,
+    FYBErrorCodeMediationAdTimeOut              = 5006,
+    FYBErrorCodeMediationNoPlacementId          = 5007,
+    FYBErrorCodeMediationNotReady               = 5008,
+    FYBErrorCodeMediationInvalidSize            = 5009,
+    FYBErrorCodeMediationLoading                = 5010,
 
-    FYBErrorCodeBannerNotReady                 = 6001,
-    FYBErrorCodeBannerNoOffers                 = 6002,
-    FYBErrorCodeBannerInvalidSize              = 6003,
-    FYBErrorCodeBannerRequesting               = 6010,
-    FYBErrorCodeBannerRequestingTimeout        = 6011,
-
-    FYBErrorCodeExternalStoreKit               = 9000
+    // Other
+    FYBErrorCodeExternalStoreKit                = 9000,
 };

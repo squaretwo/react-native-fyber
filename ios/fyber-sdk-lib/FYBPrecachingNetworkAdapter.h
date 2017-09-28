@@ -1,7 +1,6 @@
 //
-// Copyright (c) 2016 Fyber. All rights reserved.
 //
-//  FYBPrecachingNetworkAdapter.h
+// Copyright (c) 2017 Fyber. All rights reserved.
 //
 //
 

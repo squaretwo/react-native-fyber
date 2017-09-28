@@ -1,9 +1,10 @@
 //
 //
-// Copyright (c) 2016 Fyber. All rights reserved.
+// Copyright (c) 2017 Fyber. All rights reserved.
 //
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
 @protocol FYBRewardedVideoNetworkAdapterDelegate;
@@ -15,7 +16,7 @@
 @protocol FYBRewardedVideoNetworkAdapter<NSObject>
 
 /**
- * Delegates implementing the FYBVideoNetworkAdapterDelegate protocol that will get notified of
+ * Delegates implementing the FYBRewardedVideoNetworkAdapterDelegate protocol that will get notified of
  * events in the lifecycle of the network adapter
  */
 @property (nonatomic, weak) id<FYBRewardedVideoNetworkAdapterDelegate> delegate;
@@ -33,7 +34,7 @@
 /**
  * Checks whether there are videos available to start playing. This is expected
  * to be asynchronous, and the answer should be delivered through the
- * -adapter:didReportVideoAvailable: delegate method
+ * - [FYBRewardedVideoNetworkAdapterDelegate adapterDidReceiveVideo:] delegate method
  */
 - (void)checkAvailability;
 

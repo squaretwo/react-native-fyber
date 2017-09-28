@@ -1,11 +1,10 @@
 //
 //
-// Copyright (c) 2016 Fyber. All rights reserved.
+// Copyright (c) 2017 Fyber. All rights reserved.
 //
 //
 
 #import "FYBInterstitialNetworkAdapter.h"
-#import "FYBTPNMediationTypes.h"
 #import "FYBPrecachingNetworkAdapter.h"
 #import "FYBBannerNetworkAdapter.h"
 

@@ -1,11 +1,10 @@
 //
 //
-// Copyright (c) 2016 Fyber. All rights reserved.
+// Copyright (c) 2017 Fyber. All rights reserved.
 //
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import "FYBRewardedVideoNetworkAdapter.h"
 
 /**
@@ -20,7 +19,7 @@
 
 /**
  * Tells the delegate about the availability of videos from the wrapped video network,
- * as a response to the [FYBVideoNetworkAdapterDelegate checkAvailability] invocation
+ * as a response to the [FYBRewardedVideoNetworkAdapter checkAvailability] invocation
  */
 - (void)adapterDidReceiveVideo:(id<FYBRewardedVideoNetworkAdapter>)adapter;
 

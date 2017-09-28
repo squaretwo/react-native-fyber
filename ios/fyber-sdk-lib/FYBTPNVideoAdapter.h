@@ -1,25 +1,23 @@
 //
 //
-// Copyright (c) 2016 Fyber. All rights reserved.
+// Copyright (c) 2017 Fyber. All rights reserved.
 //
 //
 
-#import "FYBTPNMediationTypes.h"
-#import "FYBBaseNetwork.h"
+#import "FYBRewardedVideoNetworkAdapter.h"
 
 @protocol FYBRewardedVideoNetworkAdapterDelegate;
+
+/**
+ *  Wrapper interface to FYBRewardedVideoNetworkAdapter
+ *
+ *  We must continue to maintain this protocol for backwards compatibility.
+ */
 @protocol FYBTPNVideoAdapter<NSObject>
 
 - (void)setNetwork:(FYBBaseNetwork *)network;
-- (NSString *)networkName;
-- (void)videosAvailable:(FYBTPNValidationResultBlock)callback;
-- (void)playVideoWithParentViewController:(UIViewController *)parentVC notifyingCallback:(FYBTPNVideoEventsHandlerBlock)eventsCallback;
 - (BOOL)startAdapterWithDictionary:(NSDictionary *)dict;
 
-@end
+- (id<FYBRewardedVideoNetworkAdapter>)networkAdapter;
 
-typedef NS_ENUM(NSInteger, FYBTPNProviderPlayingState) {
-    FYBTPNProviderPlayingStateNotPlaying,
-    FYBTPNProviderPlayingStateWaitingForPlayStart,
-    FYBTPNProviderPlayingStatePlaying
-};
+@end

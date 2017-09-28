@@ -1,6 +1,6 @@
 //
 //
-// Copyright (c) 2016 Fyber. All rights reserved.
+// Copyright (c) 2017 Fyber. All rights reserved.
 //
 //
 
@@ -32,8 +32,8 @@
  *
  *  @param viewController The view controller parent of the Offer Wall view controller
  *  @param animated       Pass YES to animate the presentation; otherwise, pass NO
- *  @param completion     The block to execute after the presentation finishes. If an error occurred, the error parameter describes the error otherwise this value is nil. You may specify nil for this parameter
- *  @param dismiss        The block to execute after the Offer Wall is dismissed. You may specify nil for this parameter
+ *  @param completion     The block to execute after the presentation finishes. You may specify nil for this parameter
+ *  @param dismiss        The block to execute after the Offer Wall is dismissed. If an error occurred, the error parameter describes the error otherwise this value is nil. You may specify nil for this parameter
  */
 - (void)presentFromViewController:(UIViewController *)viewController
                          animated:(BOOL)animated
@@ -46,8 +46,8 @@
  *  @param viewController The view controller parent of the Offer Wall view controller
  *  @param parameters     Parameters that you can pass onto the Offer Wall to configure it
  *  @param animated       Pass YES to animate the presentation; otherwise, pass NO
- *  @param completion     The block to execute after the presentation finishes. If an error occurred, the error parameter describes the error otherwise this value is nil. You may specify nil for this parameter
- *  @param dismiss        The block to execute after the Offer Wall is dismissed. You may specify nil for this parameter
+ *  @param completion     The block to execute after the presentation finishes. You may specify nil for this parameter
+ *  @param dismiss        The block to execute after the Offer Wall is dismissed. If an error occurred, the error parameter describes the error otherwise this value is nil. You may specify nil for this parameter
  *
  *  @see FYBRequestParameters
  */
