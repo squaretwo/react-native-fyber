@@ -6,6 +6,12 @@
 //
 #import "RNFyberRewardedVideo.h"
 
+NSString *const kRrewardedVideoReceived = @"rewardedVideoReceived";
+NSString *const kRewardedVideoFailedToLoad = @"rewardedVideoFailedToLoad";
+NSString *const kRewardedVideoDidStart = @"rewardedVideoDidStart";
+NSString *const kRewardedVideoClosedByError = @"rewardedVideoClosedByError";
+NSString *const kRewardedVideoClosedByUser = @"rewardedVideoClosedByUser";
+
 @implementation RNFyberRewardedVideo {
     FYBRewardedVideoController *rewardedVideoController;
     RCTResponseSenderBlock _requestVideoCallback;
@@ -44,25 +50,32 @@ RCT_EXPORT_METHOD(showRewardedVideo)
     [rewardedVideoController presentRewardedVideoFromViewController:[UIApplication sharedApplication].delegate.window.rootViewController];
 }
 
+- (NSArray<NSString *> *)supportedEvents {
+    return @[kRrewardedVideoReceived,
+             kRewardedVideoFailedToLoad,
+             kRewardedVideoDidStart,
+             kRewardedVideoClosedByError,
+             kRewardedVideoClosedByUser
+             ];
+}
 
 #pragma mark delegate events
 
 - (void)rewardedVideoControllerDidReceiveVideo:(FYBRewardedVideoController *)rewardedVideoController {
-    NSLog(@">>>>>>>>>>>> rewardedVideoControllerDidReceiveVideo!");
-   [self.bridge.eventDispatcher sendDeviceEventWithName:@"rewardedVideoReceived" body:nil];
+    NSLog(@">>>>>>>>>>>> rewardedVideoReceived!");
+    [self sendEventWithName:kRrewardedVideoReceived body:nil];
     _requestVideoCallback(@[[NSNull null]]);
 }
 
 -(void)rewardedVideoController:(FYBRewardedVideoController *)rewardedVideoController didFailToReceiveVideoWithError:(NSError *)error{
     NSLog(@"An error occured while receiving the video ad %@", error);
-    [self.bridge.eventDispatcher sendDeviceEventWithName:@"rewardedVideoFailedToLoad" body:nil];
+    [self sendEventWithName:kRewardedVideoFailedToLoad body:nil];
     _requestVideoCallback(@[[error description]]);
 }
 
 -(void)rewardedVideoControllerDidStartVideo:(FYBRewardedVideoController *)rewardedVideoController{
     NSLog(@">>>> AWW YA ---- A video has just been presented");
-   [self.bridge.eventDispatcher sendDeviceEventWithName:@"rewardedVideoDidStart" body:nil];
-
+    [self sendEventWithName:kRewardedVideoDidStart body:nil];
 }
 
 
@@ -72,11 +85,11 @@ RCT_EXPORT_METHOD(showRewardedVideo)
     switch (reason) {
         case FYBRewardedVideoControllerDismissReasonError:
             reasonDescription = @"because of an error during playing";
-            [self.bridge.eventDispatcher sendDeviceEventWithName:@"rewardedVideoClosedByError" body:nil];
+            [self sendEventWithName:kRewardedVideoClosedByError body:nil];
             break;
         case FYBRewardedVideoControllerDismissReasonUserEngaged:
             reasonDescription = @"because the user clicked on it";
-            [self.bridge.eventDispatcher sendDeviceEventWithName:@"rewardedVideoClosedByUser" body:nil];
+            [self sendEventWithName:kRewardedVideoClosedByUser body:nil];
             break;
         case FYBRewardedVideoControllerDismissReasonAborted:
             reasonDescription = @"because the user explicitly closed it";
