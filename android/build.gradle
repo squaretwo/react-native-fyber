@@ -19,6 +19,6 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:0.20.+'
-    compile 'com.fyber:fyber-sdk:8.16.1'
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.fyber:fyber-sdk:8.20.0'
 }

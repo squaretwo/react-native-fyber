@@ -339,11 +339,11 @@
 		B57498601CEFB0AB002F1EFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../ios/**";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../ios/Pods/**";
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)/**",
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/fyber-sdk-lib/**",
+					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -357,11 +357,11 @@
 		B57498611CEFB0AB002F1EFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../ios/**";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../ios/Pods/**";
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)/**",
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/fyber-sdk-lib/**",
+					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
