@@ -1,11 +1,7 @@
-'use strict';
-
-import {
-  NativeModules,
-  DeviceEventEmitter,
-} from 'react-native';
+import { NativeModules, NativeEventEmitter } from 'react-native';
 
 const RNFyberRewardedVideo = NativeModules.RNFyberRewardedVideo;
+const RNFyberRewardedVideoEventEmitter = new NativeEventEmitter(RNFyberRewardedVideo);
 
 const eventHandlers = {
   rewardedVideoReceived: new Map(),
@@ -18,19 +14,19 @@ const eventHandlers = {
 const addEventListener = (type, handler) => {
   switch (type) {
     case 'rewardedVideoReceived':
-      eventHandlers[type].set(handler, DeviceEventEmitter.addListener(type, handler));
+      eventHandlers[type].set(handler, RNFyberRewardedVideoEventEmitter.addListener(type, handler));
       break;
     case 'rewardedVideoFailedToLoad':
-      eventHandlers[type].set(handler, DeviceEventEmitter.addListener(type, (error) => { handler(error); }));
+      eventHandlers[type].set(handler, RNFyberRewardedVideoEventEmitter.addListener(type, (error) => { handler(error); }));
       break;
     case 'rewardedVideoDidStart':
-      eventHandlers[type].set(handler, DeviceEventEmitter.addListener(type, handler));
+      eventHandlers[type].set(handler, RNFyberRewardedVideoEventEmitter.addListener(type, handler));
       break;
     case 'rewardedVideoClosedByUser':
-      eventHandlers[type].set(handler, DeviceEventEmitter.addListener(type, handler));
+      eventHandlers[type].set(handler, RNFyberRewardedVideoEventEmitter.addListener(type, handler));
       break;
     case 'rewardedVideoClosedByError':
-      eventHandlers[type].set(handler, DeviceEventEmitter.addListener(type, handler));
+      eventHandlers[type].set(handler, RNFyberRewardedVideoEventEmitter.addListener(type, handler));
       break;
     default:
       console.log(`Event with type ${type} does not exist.`);
@@ -46,11 +42,11 @@ const removeEventListener = (type, handler) => {
 }
 
 const removeAllListeners = () => {
-  DeviceEventEmitter.removeAllListeners('rewardedVideoReceived');
-  DeviceEventEmitter.removeAllListeners('rewardedVideoFailedToLoad');
-  DeviceEventEmitter.removeAllListeners('rewardedVideoDidStart');
-  DeviceEventEmitter.removeAllListeners('rewardedVideoClosedByUser');
-  DeviceEventEmitter.removeAllListeners('rewardedVideoClosedByError');
+  RNFyberRewardedVideoEventEmitter.removeAllListeners('rewardedVideoReceived');
+  RNFyberRewardedVideoEventEmitter.removeAllListeners('rewardedVideoFailedToLoad');
+  RNFyberRewardedVideoEventEmitter.removeAllListeners('rewardedVideoDidStart');
+  RNFyberRewardedVideoEventEmitter.removeAllListeners('rewardedVideoClosedByUser');
+  RNFyberRewardedVideoEventEmitter.removeAllListeners('rewardedVideoClosedByError');
 };
 
 module.exports = {
