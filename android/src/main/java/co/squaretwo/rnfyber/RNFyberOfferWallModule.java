@@ -42,25 +42,31 @@ public class RNFyberOfferWallModule extends ReactContextBaseJavaModule {
             @Override
             public void run() {
                 Log.d(TAG, "Settings appId:" + appId);
-                Fyber.Settings settings = Fyber.with(appId, getCurrentActivity()).withUserId(userId).withSecurityToken(securityToken).start();
-                requestCallback = new RequestCallback() {
-                    @Override
-                    public void onRequestError(RequestError requestError) {
-                        Log.d(TAG, "Something went wrong with the request: " + requestError.getDescription());
-                    }
+                try {
+                    Fyber.Settings settings = Fyber.with(appId, getCurrentActivity()).withUserId(userId).withSecurityToken(securityToken).start();
 
-                    @Override
-                    public void onAdAvailable(Intent intent) {
-                        Log.d(TAG, "Offers are available");
-                        mOfferWallIntent = intent;
-                    }
+                    requestCallback = new RequestCallback() {
+                        @Override
+                        public void onRequestError(RequestError requestError) {
+                            Log.d(TAG, "Something went wrong with the request: " + requestError.getDescription());
+                        }
 
-                    @Override
-                    public void onAdNotAvailable(AdFormat adFormat) {
-                        Log.d(TAG, "No ad available");
-                    }
-                };
-                OfferWallRequester.create(requestCallback).request(mContext);
+                        @Override
+                        public void onAdAvailable(Intent intent) {
+                            Log.d(TAG, "Offers are available");
+                            mOfferWallIntent = intent;
+                        }
+
+                        @Override
+                        public void onAdNotAvailable(AdFormat adFormat) {
+                            Log.d(TAG, "No ad available");
+                        }
+                    };
+                    OfferWallRequester.create(requestCallback).request(mContext);
+                }
+                catch (IllegalArgumentException e) {
+                    Log.e(TAG, "IllegalArgumentException: " + e.getMessage());
+                }
             }
         });
     }
