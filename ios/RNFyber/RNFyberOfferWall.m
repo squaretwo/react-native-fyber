@@ -18,7 +18,7 @@
 RCT_EXPORT_MODULE();
 
 // Initialize Fyber before showing the offer wall
-RCT_EXPORT_METHOD(initializeOfferWall:(NSString *)appId securityToken:(NSString *)securityToken userId:(NSString *)userId)
+RCT_EXPORT_METHOD(initializeOfferWall:(NSString *)appId securityToken:(NSString *)securityToken userId:(NSString *)userId callBack:(RCTResponseSenderBlock)errorCallback)
 {
   FYBSDKOptions *options = [FYBSDKOptions optionsWithAppId:appId
                                                     userId:userId

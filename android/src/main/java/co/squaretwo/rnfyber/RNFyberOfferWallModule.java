@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
+import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -37,7 +38,7 @@ public class RNFyberOfferWallModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void initializeOfferWall(final String appId, final String securityToken, final String userId) {
+    public void initializeOfferWall(final String appId, final String securityToken, final String userId, final Callback errorCallback) {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override
             public void run() {
@@ -65,7 +66,8 @@ public class RNFyberOfferWallModule extends ReactContextBaseJavaModule {
                     OfferWallRequester.create(requestCallback).request(mContext);
                 }
                 catch (IllegalArgumentException e) {
-                    Log.e(TAG, "IllegalArgumentException: " + e.getMessage());
+                    Log.e(TAG, e.getMessage());
+                    errorCallback.invoke(e.getMessage());
                 }
             }
         });
