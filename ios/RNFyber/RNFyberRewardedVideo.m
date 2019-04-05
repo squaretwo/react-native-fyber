@@ -82,6 +82,8 @@ RCT_EXPORT_METHOD(showRewardedVideo)
 -(void)rewardedVideoController:(FYBRewardedVideoController *)rewardedVideoController didDismissVideoWithReason:(FYBRewardedVideoControllerDismissReason)reason{
     
     NSString *reasonDescription;
+    NSDictionary *body;
+    
     switch (reason) {
         case FYBRewardedVideoControllerDismissReasonError:
             reasonDescription = @"because of an error during playing";
@@ -89,10 +91,13 @@ RCT_EXPORT_METHOD(showRewardedVideo)
             break;
         case FYBRewardedVideoControllerDismissReasonUserEngaged:
             reasonDescription = @"because the user clicked on it";
-            [self sendEventWithName:kRewardedVideoClosedByUser body:nil];
+            body = @{ @"wasAborted": [NSNumber numberWithBool:NO] };
+            [self sendEventWithName:kRewardedVideoClosedByUser body:body];
             break;
         case FYBRewardedVideoControllerDismissReasonAborted:
             reasonDescription = @"because the user explicitly closed it";
+            body = @{ @"wasAborted": [NSNumber numberWithBool:YES] };
+            [self sendEventWithName:kRewardedVideoClosedByUser body:body];
             break;
     }
     
